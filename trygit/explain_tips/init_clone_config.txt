@@ -1,0 +1,19 @@
+1、init用来初始化一个git版本管理目录，例子：git init 目录，会创建一个.git文件夹(默认隐藏)
+
+2、--bare， init的时候加上 --bare初始化一个裸Git仓库，作为中央仓库(次仓库作为存储设备)，不作为开发环境，可以看成svn中的服务器角色
+
+3、clone用来克隆一个远程仓库，作为本地的一个Git仓库，与原仓库完全隔离,用法：git clone remote目录 local目录
+
+4、clone的两种方式，通过http或者ssh。http方式在以后的push等操作需要输入用户名和密码，ssh更加省事快速，创建的方法见[连接1]以及它里面的相关连接
+
+5、所有的add、commit等操作都是针对本地git的，可以通过push，pull等命令让本地仓库和中央仓库进行联系
+
+6、clone时候目录后面加 .git,克隆到本地后拓展名 .git会被去除，标明自己是非裸状态
+
+7、git config 可以定义git定义作者名称、邮箱、快捷方式等，文件保存在用户的文件夹下，名为.gitconfig
+
+8、针对特定仓库的配置，房子自己的.git/config文件里
+
+
+连接1：https://help.github.com/articles/about-ssh/
+
