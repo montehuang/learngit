@@ -1,0 +1,15 @@
+1、回到某个分支上，例子：git checkout master
+
+2、查看文件之前的版本，git checkout <commit>
+<file>，是将工作目录中的<file>文件变成<commit>那次提交文件的拷贝，并加到缓存区（也就是执行了add命令)
+
+3、更新工作目录中的所有文件，使得和特定提交中的文件一致，git checkout <commit>
+
+4、一般HEAD指向master或者某个分支，当3中的命令执行的时候，HEAD就只想某次的commit，但是2中只是将某个文件回复到某次commit时候的状态，并没有影响HEAD
+
+5、3中当前的工作目录就是某次提交的那个状态，可以进行修改测试等，使用git
+checkout master 就可以回到项目当前的状态了，然后使用git revert或者git
+reset回滚自己的修改
+
+6、2中若是想让文件回滚到当前版本的状态，则可以使用git checkout HEAD
+<file>，因为此时的HEAD还是指向当前的版本
